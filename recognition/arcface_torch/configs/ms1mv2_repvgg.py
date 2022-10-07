@@ -14,7 +14,7 @@ config.lr = 0.1
 config.verbose = 2000
 config.dali = False
 
-config.rec = "/train_tmp/faces_emore"
+config.rec = "/content/faces_emore"
 config.num_classes = 85742
 config.num_image = 5822653
 config.num_epoch = 40
