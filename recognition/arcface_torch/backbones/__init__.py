@@ -20,7 +20,7 @@ def get_model(name, **kwargs):
         return iresnet2060(False, **kwargs)
     
     elif name == "repvgg":
-        return get_repvgg(False, **kwargs)
+        return get_repvgg(False, False)
 
     elif name == "mbf":
         fp16 = kwargs.get("fp16", False)
