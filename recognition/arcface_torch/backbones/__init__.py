@@ -1,5 +1,6 @@
 from .iresnet import iresnet18, iresnet34, iresnet50, iresnet100, iresnet200
 from .mobilefacenet import get_mbf
+from .repvgg import get_repvgg
 
 
 def get_model(name, **kwargs):
@@ -17,6 +18,9 @@ def get_model(name, **kwargs):
     elif name == "r2060":
         from .iresnet2060 import iresnet2060
         return iresnet2060(False, **kwargs)
+    
+    elif name == "repvgg":
+        return get_repvgg(False, **kwargs)
 
     elif name == "mbf":
         fp16 = kwargs.get("fp16", False)
